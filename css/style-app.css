@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #dee4e4;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    background-color: #232525;
+    height: 65px;
+    align-items: center;
+}
+
+.nav-logo a img{
+    width: 60%;
+    
+}
+
+.nav-links ul{
+    list-style: none;
+}
+
+.nav-links ul li{
+    margin-right: 80px;
+    display: inline-block;
+}
+
+.nav-links ul li a{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.nav-links ul li a:hover{
+    color: #087c7c;
+    transition: all 0.8s ease 0s;
+
+}
+
+.login form input[type="submit"]:hover{
+    background-color: #156464;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.modal-overlay{
+    background-color: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  
+
+    top: 0;
+    position: fixed;
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.modal-overlay.active{
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.win{
+    width: 400px;
+    height: 300px;
+    background-color: #232325;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 80%;
+    margin-top: 4%;
+
+}
+
+.win form{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.win form input{
+    width: 100%;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.win form input[type="submit"]{
+    background-color: #232325;
+    color: #087c7c;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+h1{
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+h2{
+    margin-left: 80%;
+    color: darkred;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+h2:hover{
+    color: red;
+}

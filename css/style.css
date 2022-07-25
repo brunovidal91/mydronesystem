@@ -1,4 +1,10 @@
-*{margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; color: #fff; font-size: 15px;}
+*{
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #fff; 
+    font-size: 15px;
+}
 
 section{
     width: 100vw;
@@ -62,7 +68,4 @@ section{
     background-color: #156464;
     cursor: pointer;
     transition: 0.8s;
-   
-
-    
 }

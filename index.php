@@ -1,3 +1,7 @@
+<?php
+    require_once("conexao.php")
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,7 +16,7 @@
         <div class="container">
             <div class="login-logo"><img src="img/drone2.png" alt="logo"></div>
             <div class="login">
-                <form action="" method="POST">
+                <form action="app.php" method="POST">
                     <input type="text" name="user" placeholder="E-mail" required autofocus autocomplete="off"/>
                     <input type="password" name="pass" placeholder="Senha" required autocomplete="off"/>
                     <input type="submit" value="Entrar"/>
