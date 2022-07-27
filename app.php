@@ -1,4 +1,5 @@
 <?php
+require_once("protect.php");
 require_once("conexao.php");
 
 $req = $conn->query("SELECT * FROM drone");
@@ -23,6 +24,7 @@ $req = $conn->query("SELECT * FROM drone");
                 <ul>
                     <li><a href="#" onClick="Fec.fechar()">+Drone</a></li>
                     <li><a href="#">+Venda</a></li>
+                    <li><a href="logout.php">Sair</a></li>
                 </ul>
             </div>
 
@@ -65,8 +67,11 @@ $req = $conn->query("SELECT * FROM drone");
 
     <div class="modal-overlay active">
         <div class="win">
-            <button onClick="Fec.fechar()">X</button>
-            <h1>Cadastro de Drone</h1>
+            <div class="cabec">
+                <button onClick="Fec.fechar()">X</button>
+                <h1>Cadastro de Drone</h1>
+            </div>
+    
             <form action="#" method="POST">
                             
                 <input type="text" name="marca" placeholder="marca..."required autofocus autocomplete="off">
