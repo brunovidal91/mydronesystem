@@ -3,12 +3,15 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: 'Poppins', sans-serif;
+    font-variant: small-caps;
+    font-size: 16px;
 }
 
 .main{
     width: 100vw;
     height: 100vh;
+
     background-color: #dee4e4;
 }
 
@@ -16,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     background-color: #232525;
-    height: 65px;
+    height: 10%;
     align-items: center;
 }
 
@@ -52,6 +55,8 @@
     transition: 0.8s;
 }
 
+/* #################### MODAL #######################*/
+
 .modal-overlay{
     background-color: rgba(0,0,0,0.7);
     width: 100vw;
@@ -67,6 +72,7 @@
 
     opacity: 1;
     visibility: visible;
+    transition: 0.5s;
 
 }
 
@@ -78,7 +84,7 @@
 
 .win{
     width: 400px;
-    height: 300px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,9 +100,10 @@
     width: 80%;
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.win form input{
+.win form input, select{
     width: 100%;
     margin-top: 8px;
     border: none;
@@ -104,31 +111,104 @@
     padding: 8px;
     margin: 5px 0;
     text-align: center;
+    font-size: 1em;
+    background-color: #000;
+    color: #fff;
+    outline: none;
 }
 
 .win form input[type="submit"]{
     background-color: #232325;
-    color: #087c7c;
+    color: #08ecec;
     cursor: pointer;
     font-weight: bold;
+    
+}
+
+.cabec-sair{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+
+}
+
+.cabec-sair button{
+    margin-left: 5px;
+    width: 15%;
+    cursor: pointer;
+    background-color: #000;
+    color: #087c7c;
+    border-radius: 8px;
+
+}
+.cabec-sair button:hover{
+    background-color: rgb(19, 18, 18);
 }
 
 h1{
-    color: white;
+    color: #08ecec;
     font-size: 1.2em;
     margin-bottom: 10px;
 }
-button{
-    color: darkred;
-    cursor: pointer;
-    font-size: 1em;
-    float: left;
-}
+
 
 h2:hover{
     color: red;
 }
-.cabec{
+
+/*######################## MAIN ####################################*/
+
+main{
+    width: 100%;
+    height: 90%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    background-color: #c8d3d3;
 }
+
+/*######################## TABLE ####################################*/
+
+.tabela{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+table{
+
+    width: 80vw;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+
+.tabela table thead th{
+    border-bottom: 1px solid #232325;
+
+}
+
+
+.tabela table tbody tr{
+    border-bottom: 1px solid #48484b;
+
+    
+}
+
+.tabela table tbody tr td a{
+    color:#087c7c
+}
+
+
+.tabela table tbody tr:hover{
+    background-color: #aeb8b8;
+    transition: 0.3s;  
+}
+
+
+
