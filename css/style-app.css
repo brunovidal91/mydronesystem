@@ -3,8 +3,8 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    /*font-variant: small-caps;*/
     font-size: 16px;
 }
 
@@ -25,22 +25,28 @@
 
 .nav-logo a img{
     width: 60%;
+
     
 }
+
+.nav-links{
+    width: 20%;
+}
+
 
 .nav-links ul{
     list-style: none;
 }
 
 .nav-links ul li{
-    margin-right: 80px;
+    margin-right: 9%;
     display: inline-block;
 }
 
 .nav-links ul li a{
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.2 em;
 
 }
 .nav-links ul li a:hover{
@@ -55,7 +61,7 @@
     transition: 0.8s;
 }
 
-/* #################### MODAL #######################*/
+/* ##################################### MODAL ##################################*/
 
 .modal-overlay{
     background-color: rgba(0,0,0,0.7);
@@ -125,17 +131,24 @@
     
 }
 
+.win form input[type="submit"]:hover{
+    background-color: #3c3c3f;
+
+    
+}
+
+
 .cabec-sair{
     width: 100%;
-    height: 15%;
+    height: 22%;
     display: flex;
     align-items:flex-start;
-    justify-content: flex-start;
+    justify-content: flex-end;
 
 }
 
 .cabec-sair button{
-    margin-left: 5px;
+    margin: 2px 3px;
     width: 15%;
     cursor: pointer;
     background-color: #000;
@@ -144,7 +157,7 @@
 
 }
 .cabec-sair button:hover{
-    background-color: rgb(19, 18, 18);
+    background-color: #3c3c3f;
 }
 
 h1{
@@ -185,20 +198,20 @@ table{
     margin-top: 20px;
     border-collapse: collapse;
     text-align: center;
+    max-height: 15%;
+
 
 }
 
 .tabela table thead th{
     border-bottom: 1px solid #232325;
-
 }
 
 
 .tabela table tbody tr{
     border-bottom: 1px solid #48484b;
-
-    
 }
+
 
 .tabela table tbody tr td a{
     color:#087c7c
@@ -210,5 +223,34 @@ table{
     transition: 0.3s;  
 }
 
+
+/*################################# TOTAL #########################*/
+
+.painel-total{
+    margin-right: 5%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 22%;
+    margin-left: 30%;
+}
+
+.total-compra label, .total-venda label{
+    font-size: 18px;
+    color: white
+}
+
+.total-compra label{
+    background-color: rgba(236, 10, 10, 0.5);
+    padding: auto;
+    border-radius: 8px;
+
+}
+
+.total-venda label{
+    background-color: rgba(12, 216, 29, 0.5);
+    padding: auto;
+    border-radius: 8px;
+}
 
 

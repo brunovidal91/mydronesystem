@@ -8,13 +8,17 @@
         }else if(strlen($_POST['pass']) == 0){
             echo"<script>alert('Favor preencher a senha')</script>";
         }else{
-            $user = $_POST['user'];
-            $pass = $_POST['pass'];
+            $user = addslashes($_POST['user']);
+            $pass = addslashes($_POST['pass']);
 
-            $sql_com = "SELECT * FROM usuarios WHERE email = '$user' AND senha='$pass'";
-            $sql_exec = $conn->query($sql_com);
-            if(mysqli_num_rows($sql_exec) > 0){
-                $user_data = $sql_exec->fetch_assoc();
+            $sql_com = "SELECT * FROM usuarios WHERE email =? AND senha=?";
+            $sql_exec = $conn->prepare($sql_com);
+            $sql_exec->bind_param("ss", $user, $pass);
+            $sql_exec->execute();
+            $get = $sql_exec->get_result();
+
+            if(mysqli_num_rows($get) > 0){
+                $user_data = $get->fetch_assoc();
 
                 if(!isset($_SESSION)){
                     session_start();
