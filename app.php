@@ -14,6 +14,7 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style-app.css">
+
     <title>Dashboard</title>
 </head>
 <body>
@@ -110,7 +111,7 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
                 </select>
                 <input type="text" name="modelo" placeholder="modelo..."required autocomplete="off">
                 <input type="number" step="0.01" name="valor_compra" placeholder="valor de compra..." required autocomplete="off">
-                <input type="number" step="0.01" name="valor_venda" placeholder="valor de venda..."required autocomplete="off">
+                <input type="number" step="0.01" name="valor_venda" placeholder="valor de venda..." autocomplete="off">
                 <input type="submit" value="Registrar">
             </form>
         </div>
