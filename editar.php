@@ -29,8 +29,6 @@ if($sql_exec_query = mysqli_query($conn, $sql_com_query)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AppDrone - Editar</title>
     <link rel="stylesheet" href="css/style_edit.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
         <nav class="menu">
@@ -49,7 +47,7 @@ if($sql_exec_query = mysqli_query($conn, $sql_com_query)){
                 <div class="form-items">
                     <label for="marca">Marca</label>                       
                     <select name="marca" id="marca">
-                        <option value="<?phpecho$marca;?>"><?php echo$marca;?></option>
+                        <option value="<?php echo$marca;?>"><?php echo$marca;?></option>
                         <option value="Autel">Autel</option>
                         <option value="DJI">DJI</option>
                         <option value="FIMI">FIMI</option>
