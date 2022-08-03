@@ -22,7 +22,7 @@ if($sql_exec_query = mysqli_query($conn, $sql_com_query)){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
