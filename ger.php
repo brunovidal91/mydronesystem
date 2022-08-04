@@ -12,7 +12,7 @@ if(isset($_POST['marca']) AND isset($_POST['modelo']) AND isset($_POST['valor_co
     $valor_compra = $_POST['valor_compra'];
     $valor_venda = $_POST['valor_venda'];
 
-    if(strlen($marca) != 0 AND strlen($modelo) != 0 AND strlen($valor_compra) != 0 AND strlen($valor_venda) != 0){
+    if(strlen($marca) != 0 AND strlen($modelo) != 0 AND strlen($valor_compra) != 0){
         $sql_com = "INSERT INTO drone (marca, modelo, valor_compra, valor_venda) VALUES ('$marca', '$modelo', '$valor_compra', '$valor_venda')";
         $sql_exec = mysqli_query($conn, $sql_com) or die('Erro Bando de dados' .mysqli_error());
         header("Location: app.php");
