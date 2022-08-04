@@ -74,8 +74,8 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
                             <td><?php echo $tent["id"]; ?></td>
                             <td><?php echo $tent["marca"]; ?></td>
                             <td><?php echo $tent["modelo"]; ?></td>
-                            <td><?php echo $tent["valor_compra"]; ?></td>
-                            <td><?php echo $tent["valor_venda_"]; ?></td>
+                            <td><?php echo 'R$ '.$tent["valor_compra"]; ?></td>
+                            <td><?php echo 'R$ '.$tent["valor_venda"]; ?></td>
                             <td><?php echo"<a href='deletar.php?id=".$tent['id']."'>Excluir</a> | <a href='editar.php?id=".$tent['id']."'>Editar</a>" ?></td>
                         </tr>
 
