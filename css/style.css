@@ -17,8 +17,8 @@ section{
 }
 
 .container{
-    width: 25%;
-    height: 50%;
+    width: 25vw;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,5 +68,13 @@ section{
     background-color: #156464;
     cursor: pointer;
     transition: 0.8s;
+}
+
+@media only screen and (min-width: 460px) and (max-width: 780px){
+
+    .container{
+        width: 50%;
+    }
+
 }
 
