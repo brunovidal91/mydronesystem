@@ -19,6 +19,7 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
 </head>
 <body>
     <div class="main">
+
         <nav class="menu">
             <div class="nav-logo"><a href="#"><img src="img/drone2.png" alt="logo"></a></div>
             <div class="painel-total">
@@ -50,19 +51,22 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
             </div>
 
         </nav>
-
+        <div class="mobile-menu">
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+        </div>
         <main>
         <div class="tabela">
             <table>
 
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Marca</th>
                         <th>Modelo</th>
                         <th>Valor de Compra</th>
                         <th>Valor de Venda</th>
-                        <th>Ação</th>
+                        <th></th>
                     </tr>
                 </thead>
 
@@ -71,12 +75,20 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
                         <?php while($tent = $req->fetch_array()){ ?>
 
                         <tr id="row-table">
-                            <td><?php echo $tent["id"]; ?></td>
                             <td><?php echo $tent["marca"]; ?></td>
                             <td><?php echo $tent["modelo"]; ?></td>
-                            <td><?php echo 'R$ '.$tent["valor_compra"]; ?></td>
-                            <td><?php echo 'R$ '.$tent["valor_venda"]; ?></td>
-                            <td><?php echo"<a href='deletar.php?id=".$tent['id']."'>Excluir</a> | <a href='editar.php?id=".$tent['id']."'>Editar</a>" ?></td>
+                            <td><?php echo 'R$ '.$tent["valor_compra_formated"]; ?></td>
+                            <td><?php echo 'R$ '.$tent["valor_venda_formated"]; ?></td>
+                            <td><?php echo"
+                                <a href='deletar.php?id=".$tent['id']." ' >
+                                <img src='img/delete.png' width='18'>
+                                </a>
+
+                                <span>  |  </span>
+
+                                <a href='editar.php?id=".$tent['id']."'>
+                                <img src='img/edit.png' width='18'>
+                                </a>"?></td>
                         </tr>
 
                         <?php } ?>
@@ -93,9 +105,7 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
 
     <div class="modal-overlay active">
         <div class="win">
-            <div class="cabec-sair">
-                <button onClick="Fec.fechar()">Sair</button>
-            </div>
+                <button onClick="Fec.fechar()">X</button>
             <div class="cabec-h1">
                 <h1>Cadastro de Drone</h1>
             </div>
@@ -118,7 +128,16 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
             
     </div>
 
-   
+   <div class="modal-mobile">
+        <div class="nav-links-mobile">
+            <ul>
+                <li><a href="#" onClick="Fec.fechar()">+Drone</a></li>
+                <li><a href="#">+Venda</a></li>
+                <li><a href="logout.php">Sair</a></li>
+            </ul>
+        </div>
+
+   </div>
 
 <script type="text/javascript" src="js/script.js"></script>
 </body>

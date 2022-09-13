@@ -96,6 +96,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: #232325;
+    position: relative;
 
 }
 
@@ -138,25 +139,28 @@
 }
 
 
-.cabec-sair{
-    width: 100%;
-    height: 22%;
-    display: flex;
-    align-items:flex-start;
-    justify-content: flex-end;
 
-}
 
-.cabec-sair button{
+.win button{
     margin: 2px 3px;
-    width: 15%;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
     cursor: pointer;
     background-color: #000;
     color: #087c7c;
-    border-radius: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 1em;
+
 
 }
-.cabec-sair button:hover{
+.win button:hover{
     background-color: #3c3c3f;
 }
 
@@ -201,20 +205,30 @@ table{
     max-height: 15%;
 
 
+
 }
 
 .tabela table thead th{
     border-bottom: 1px solid #232325;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
 }
 
 
 .tabela table tbody tr{
     border-bottom: 1px solid #48484b;
+
 }
 
 
 .tabela table tbody tr td a{
     color:#087c7c
+}
+
+.tabela table tbody tr td{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .85em;
+    height: 30px;
 }
 
 
@@ -227,30 +241,180 @@ table{
 /*################################# TOTAL #########################*/
 
 .painel-total{
-    margin-right: 5%;
     display: flex;
-    text-align: center;
     justify-content: space-between;
-    width: 22%;
-    margin-left: 30%;
+    align-items: center;
+    width: 350px;
+    height: 60px;
+}
+
+.total-compra, .total-venda{
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-compra{
+    background-color: rgba(236, 10, 10, 0.5);
+    padding: 5px;
+    border-radius: 8px;
+
+}
+
+.total-venda{
+    background-color: rgba(12, 216, 29, 0.5);
+    border-radius: 8px;
+
 }
 
 .total-compra label, .total-venda label{
-    font-size: 18px;
+    font-size: 1em;
     color: white
 }
 
-.total-compra label{
-    background-color: rgba(236, 10, 10, 0.5);
-    padding: auto;
-    border-radius: 8px;
 
+
+.mobile-menu{
+    display: none;
 }
 
-.total-venda label{
-    background-color: rgba(12, 216, 29, 0.5);
-    padding: auto;
-    border-radius: 8px;
+.modal-mobile{
+    display: none;
+}
+
+.excInc{
+    position: absolute;
+}
+
+
+
+
+@media screen and (max-width: 700px){
+
+    .painel-total{
+        margin-right: 20px;
+        width: 250px;
+    }
+    .total-compra, .total-venda{
+        width: 120px;
+        margin-right: 5px;
+
+    }
+
+    .total-compra label, .total-venda label{
+        font-size: .9em;
+    }
+
+    .nav-logo{
+        width: 140px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .nav-logo a img{
+        width: 140px;
+        height: 60px;
+    
+        
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .mobile-menu{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;   
+        position: absolute;
+        z-index: 1000;
+        right: 10px; 
+    }
+    
+    .lines{
+        width: 100%;
+        height: 3px;
+        background-color: #232525;
+    }
+
+    @keyframes modal-mobile{
+        from{
+            transform: translateX(100%);
+        }
+
+        to{
+            transform: translateX(0);
+        }
+    }
+
+
+
+    .modal-mobile{
+        width: 200px;
+        height: 40vh;
+        position: absolute;
+        top: 125px;
+        right: 0;
+        background-color: #232525;
+        padding: 20px;
+        display: none;
+
+    }
+
+    .activeMobile{
+        display: block;
+        animation: modal-mobile .5s;
+    }
+
+    .nav-links-mobile{
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav-links-mobile ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 3rem;
+        align-items: center;
+        justify-content: flex-start;
+
+
+    }
+
+    .nav-links-mobile ul li{
+        width: 100%;
+        height: 40px;
+        background-color: #087c7c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links-mobile ul li a{
+        width: 100%;
+        height: 40px;
+        background-color: #48484b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+
+    }
+
+    .nav-links-mobile ul li:last-child{
+        margin-top: 70px;
+    }
 }
 
 
