@@ -28,6 +28,7 @@ if($sql_exec_query = mysqli_query($conn, $sql_com_query)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AppDrone - Editar</title>
+    <link rel="shortcut icon" href="img/camera-drone.png">
     <link rel="stylesheet" href="css/style_edit.css">
 </head>
 <body>
@@ -45,8 +46,8 @@ if($sql_exec_query = mysqli_query($conn, $sql_com_query)){
 
             <form action="atualizar.php" method="POST">
                 <div class="form-items">
-                    <label for="marca">Marca</label>                       
-                    <select name="marca" id="marca">
+                    <label for="marca" class="lbl_edit">Marca</label>                       
+                    <select name="marca" id="marca" class="item_form">
                         <option value="<?php echo$marca;?>"><?php echo$marca;?></option>
                         <option value="Autel">Autel</option>
                         <option value="DJI">DJI</option>
@@ -55,12 +56,12 @@ if($sql_exec_query = mysqli_query($conn, $sql_com_query)){
                         <option value="SJRC">SJRC</option>
                     </select>
                     <input type="hidden" name="id" value="<?php echo$id?>">
-                    <label for="modelo">Modelo</label>
-                    <input type="text" id="modelo"name="modelo" value="<?php echo$modelo?>">
-                    <label for="valor_compra">Valor de Compra</label>
-                    <input type="number" step="0.01" id="valor_compra" name="valor_compra" value="<?php echo$valor_compra?>">
-                    <label for="valor_venda">Valor de Venda</label>
-                    <input type="number" step="0.01" id="valor_venda"name="valor_venda" value="<?php echo$valor_venda?>">
+                    <label for="modelo" class="lbl_edit">Modelo</label>
+                    <input type="text" id="modelo"name="modelo" class="item_form" value="<?php echo$modelo?>">
+                    <label for="valor_compra" class="lbl_edit">Valor de Compra</label>
+                    <input type="number" step="0.01" id="valor_compra" class="item_form" name="valor_compra" value="<?php echo$valor_compra?>">
+                    <label for="valor_venda" class="lbl_edit">Valor de Venda</label>
+                    <input type="number" step="0.01" id="valor_venda" class="item_form" name="valor_venda" value="<?php echo$valor_venda?>">
                     <input type="submit" value="Salvar">
                 </div>
             </form>

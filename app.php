@@ -13,6 +13,7 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/camera-drone.png">
     <link rel="stylesheet" href="css/style-app.css">
 
     <title>Dashboard</title>
@@ -45,7 +46,6 @@ $req = $conn->query("SELECT *, FORMAT(valor_compra, 2, 'de_DE') AS valor_compra_
             <div class="nav-links">
                 <ul>
                     <li><a href="#" onClick="Fec.fechar()">+Drone</a></li>
-                    <li><a href="#">+Venda</a></li>
                     <li><a href="logout.php">Sair</a></li>
                 </ul>
             </div>

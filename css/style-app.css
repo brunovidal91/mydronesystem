@@ -344,33 +344,23 @@ table{
         background-color: #232525;
     }
 
-    @keyframes modal-mobile{
-        from{
-            transform: translateX(100%);
-        }
-
-        to{
-            transform: translateX(0);
-        }
-    }
-
-
 
     .modal-mobile{
         width: 200px;
         height: 40vh;
         position: absolute;
         top: 125px;
-        right: 0;
+        right: -200px;
         background-color: #232525;
         padding: 20px;
-        display: none;
+        transition: .5s;
+        display: block;
+
 
     }
 
     .activeMobile{
-        display: block;
-        animation: modal-mobile .5s;
+        right: 0;
     }
 
     .nav-links-mobile{
