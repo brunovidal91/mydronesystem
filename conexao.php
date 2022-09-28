@@ -1,11 +1,10 @@
 <?php
-$bd = "heroku_d52fd739477431f";
-$servidor = "us-cdbr-east-06.cleardb.net";
-$usuario = "b82bdb03d85ccb";
-$senha = "19cc502d";
+
+$envPath = realpath(dirname(__FILE__) . './env.ini');
+$env = parse_ini_file($envPath);
 
 try{
-    $conn =mysqli_connect($servidor, $usuario, $senha, $bd);
+    $conn =mysqli_connect($env['host'], $env['user'], $env['password'], $env['database']);
 }catch(Exception $e){
     echo 'Erro de banco de dados' .$e;
 }
