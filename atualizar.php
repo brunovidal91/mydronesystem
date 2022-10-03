@@ -12,6 +12,7 @@ $sql_com = "UPDATE drone SET marca = '$marca', modelo = '$modelo', valor_compra 
 
 
 if($sql_exec = mysqli_query($conn, $sql_com)){
+    mysqli_close($conn);
    header("Location: app.php");
 }else{
 
