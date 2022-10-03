@@ -1,12 +1,23 @@
 <?php
 
-$envPath = realpath(dirname(__FILE__) . './env.sample.ini');
-$env = parse_ini_file($envPath);
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"], 1);
+
+$active_group = 'default';
+$query_builder = TRUE;
+
+
+
+// $envPath = realpath(dirname(__FILE__) . './env.sample.ini');
+// $env = parse_ini_file($envPath);
 
 try{
-    $conn =mysqli_connect($env['host'], $env['user'], $env['password'], $env['database']);
-}catch(Exception $e){
-    echo 'Erro de banco de dados' .$e;
-}
+     $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+ }catch(Exception $e){
+     echo 'Erro de banco de dados' .$e;
+ }
 
-?>
+ ?>
